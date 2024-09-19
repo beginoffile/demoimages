@@ -1,0 +1,92 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	background: darkgray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Poppins', sans-serif;
+	overflow: hidden;
+}
+.box {
+	width: 600px;
+	height: 400px;
+	background: url(https://i.postimg.cc/BvT6sVXG/2.jpg);
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+}
+.box:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.92);
+}
+.box .line {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+.box .line span {
+	width: 20%;
+	height: 100%;
+	background: url(https://i.postimg.cc/BvT6sVXG/2.jpg);
+	transition: 0.5s;
+}
+.box .line span:nth-child(1) {
+	background-position: 0;
+	transition-delay: 0s;
+}
+.box .line span:nth-child(2) {
+	background-position: 25%;
+	transition-delay: 0.1s;
+}
+.box .line span:nth-child(3) {
+	background-position: 50%;
+	transition-delay: 0.2s;
+}
+.box .line span:nth-child(4) {
+	background-position: 75%;
+	transition-delay: 0.3s;
+}
+.box .line span:nth-child(5) {
+	background-position: 100%;
+	transition-delay: 0.45s;
+}
+.box:hover .line>span {
+	transform: translateY(-100%);
+}
+.box:hover .content {
+	transform: translateY(0);
+	transition: 1s;
+	transition-delay: 0.1s;
+}
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: #fff;
+	padding: 20px;
+	width: 100%;
+	height: 100%;
+	transform: translateY(100%);
+	text-align: center;
+	box-sizing: border-box;
+}
+.content h2 {
+	margin: 5px 0;
+	text-transform: uppercase;
+	color: gold;
+	font-size: 40px;
+}
+.content h4 {
+	width: 75%;
+	line-height: 1.9;
+}
